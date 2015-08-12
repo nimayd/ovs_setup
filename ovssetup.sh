@@ -28,5 +28,5 @@ then
                          --bootstrap-ca-cert=db:Open_vSwitch,SSL,ca_cert \
                          --pidfile --detach
     ovs-vsctl --no-wait init
-    ovs-vswitchd --pidfile --detach
+    ovs-vswitchd --pidfile --detach --log-file
 fi
