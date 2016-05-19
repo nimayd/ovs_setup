@@ -4,9 +4,9 @@ COMMAND=$1
 
 if [ "$COMMAND" == "conf" ]
 then
-    #apt-get -y install autoconf libtool openssl pkg-config
-    #aptitude install python-qt4 python-qt4-dev pyqt-tools
-    #apt-get -y install git-email libmail-sendmail-perl libmailtools-perl
+    apt-get -y install autoconf libtool openssl pkg-config
+    aptitude install python-qt4 python-qt4-dev pyqt-tools
+    apt-get -y install git-email libmail-sendmail-perl libmailtools-perl
     ./boot.sh
     ./configure --with-linux=/lib/modules/`uname -r`/build
 
@@ -29,4 +29,9 @@ then
                          --pidfile --detach
     ovs-vsctl --no-wait init
     ovs-vswitchd --pidfile --detach --log-file
+
+elif [ "$COMMAND" == "check" ]
+then
+    make check TESTSUITEFLAGS="-j3"
+
 fi
