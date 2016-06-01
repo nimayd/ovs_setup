@@ -4,7 +4,7 @@ COMMAND=$1
 
 if [ "$COMMAND" == "conf" ]
 then
-    apt-get -y install autoconf libtool openssl pkg-config
+    apt-get -y install autoconf libtool sparse openssl pkg-config make gcc libssl-dev debhelper dh-autoreconf
     aptitude install python-qt4 python-qt4-dev pyqt-tools
     apt-get -y install git-email libmail-sendmail-perl libmailtools-perl
     ./boot.sh
