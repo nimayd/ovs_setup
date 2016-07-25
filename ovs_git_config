@@ -1,0 +1,22 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/nimayd/ovs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "upstream"]
+	url = https://github.com/openvswitch/ovs.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[sendemail]
+    suppresscc = self
+    chainreplyto = false
+    from = Nimay Desai <nimaydesai1@gmail.com>
+    to = guru@ovn.org
+    smtpserver = smtp.gmail.com
+    smtpuser = nimaydesai1@gmail.com
+    smtpssl
